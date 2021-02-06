@@ -1,0 +1,35 @@
+/* 全体設定 */
+.page-enter-active { /* 切り替え後のページのトランジション設定 */
+  transition: 1s; /* 切り替え時間1秒 */
+}
+.page-leave-active { /* 切り替え前のページのトランジション設定 */
+  transition: 0.5s; /* 切り替え時間0.5秒 */
+}
+.page-enter { /* 切り替え後ページのトランジション前スタイル */
+  opacity: 0.5; /* 透明度0.5 */
+  background-color: red; /* 赤 */
+  transform: translateX(-100px); /* 左にずれた位置 */
+}
+.page-leave-to { /* 切り替え前のページのトランジション後スタイル */
+  opacity: 0; /* 透明度0 */
+  background-color: yellow; /* 黄色 */
+  transform: translateY(100px); /* 下にずれた位置 */
+}
+
+/* Apple専用 */
+.apple-enter-active { /* 切り替え後のページのトランジション設定 */
+  transition: 2s; /* 切り替え時間2秒 */
+}
+.apple-leave-active { /* 切り替え前のページのトランジション設定 */
+  transition: 3s; /* 切り替え時間3秒 */
+}
+.apple-enter { /* 切り替え後ページのトランジション前スタイル */
+  opacity: 0.25; /* 透明度0.25 */
+  background-color: cyan; /* シアン */
+  transform: translateY(-100px); /* 上にずれた位置 */
+}
+.apple-leave-to { /* 切り替え前のページのトランジション後スタイル */
+  opacity: 0; /* 透明度0 */
+  background-color: blue; /* 青 */
+  transform: translateX(100px); /* 右にずれた位置 */
+}

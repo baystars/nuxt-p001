@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <h1>Hello {{name}}!</h1> <!-- nameの表示 …（1） -->
-    <input v-model="name"><!-- nameの入力 …（2）-->
+  <div class="container">
+    <h1>この秋冬の注目スマホ</h1>
+    <nuxt-link to="/Apple">Apple</nuxt-link>
+    <nuxt-link to="/Android/Samsung">Samsung</nuxt-link>
+    <nuxt-link to="/Android/SHARP">SHARP</nuxt-link>
   </div>
 </template>
-<script>
-export default {
-  data() { // ページに表示するデータの指定 …（3）
-    return {
-      name: 'World' // nameの初期値 …（4）
-    }
-  }
+<style scoped>
+.container {
+  margin: 10px;
 }
-</script>
+</style>
