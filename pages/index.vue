@@ -132,6 +132,16 @@
     </div>
 
     <div id="sec5">
+      <h1>v-onディレクティブ</h1>
+      <h3>クリック</h3>
+      <button v-on:click="greet">ご挨拶</button>
+
+      <h3>キー入力</h3>
+      <input v-on:keyup="onKeyUp($event)" />
+      <div>{{ message }}</div>
+    </div>
+    
+    <div id="sec6">
       <h1>v-ifディレクティブ</h1>
       <h3>アンケート</h3>
       <div>あなたはどれが好き？</div>
@@ -200,6 +210,12 @@ export default {
     },
   },
   methods: {
+    greet() {
+      alert("こんにちは！");
+    },
+    onKeyUp(event) {
+      this.message = "押されたキー: " + event.key;
+    },
     onFormSubmit() {
       alert("フォームのSubmitがキャンセルされます。");
     },
@@ -219,6 +235,6 @@ h3 {
   margin-bottom: 12px;
 }
 .color-red {
-  color:red
+  color: red;
 }
 </style>
