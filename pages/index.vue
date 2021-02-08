@@ -1,24 +1,34 @@
 <template>
   <div class="container">
-    <h1>基本的なコンポーネントの例</h1>
-    <Apple/><!-- Appleコンポーネント -->
-    <Samsung/><!-- Samsungコンポーネント -->
+    <h1>プロパティに値を直接設定</h1>
+    <Smartphone id="1" vendor="Apple" name="iPhone 11" price="74800" is5G="false"/>
+    <h1>v-bindで変数を設定</h1>
+    <Smartphone
+      v-bind:id="phoneId"
+      v-bind:vendor="phoneVendor"
+      v-bind:name="phoneName"
+      v-bind:price="phonePrice"
+      v-bind:is5G="phoneIs5G"/>
   </div>
 </template>
 <script>
-// コンポーネントを参照
-import Apple from '~/components/Apple'
-import Samsung from '~/components/Samsung'
-// ページ実装部
+import Smartphone from '~/components/Smartphone'
 export default {
-  // 利用するコンポーネントを定義
   components: {
-    Apple,
-    Samsung
+    Smartphone
+  },
+  data() {
+    return {
+      phoneId: 2,
+      phoneVendor: 'Samsung',
+      phoneName: 'Galaxy Note10+ 5G',
+      phonePrice: 140000,
+      phoneIs5G: true
+    }
   }
 }
 </script>
-<style scoped>
+<style>
 .container {
   margin: 10px;
 }
