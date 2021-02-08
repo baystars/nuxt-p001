@@ -1,5 +1,6 @@
 <template>
   <div class="component">
+    ID：<input v-model="patientId" v-on:input="onInput">
     氏名：<input v-model="name" v-on:input="onInput">
   </div>
 </template>
@@ -7,12 +8,16 @@
 export default {
   data() {
     return {
+      patientId: '',
       name: ''
     }
   },
   methods: {
     onInput() {
-      this.$store.dispatch('doSetName', this.name)
+      this.$store.dispatch('doSetValue', {
+        patientId: this.patientId,
+        name: this.name
+      })
     }
   }
 }

@@ -1,22 +1,18 @@
-// 基本情報
+// 血液検査
 // ステート
 export const state = () => ({
-  patientId: '',// ID
-  name: '',     // 名前
+  gammaGT: 0 // 肝臓のγ-GT
 })
 // ミューテーション
 export const mutations = {
   setValue(state, payload) {
-    state.patientId = payload.patientId;
-    state.name = payload.name;
+    state.gammaGT = payload.gammaGT;
   }
 }
 // ゲッター
 export const getters = {
-  nameWithSuffix(state) {
-    return function (suffix) {
-      return state.name + suffix
-    }
+  isGammaGTNormal(state) {
+    return state.gammaGT <= 70 // γ-GTの正常値：70以下
   }
 }
 // アクション

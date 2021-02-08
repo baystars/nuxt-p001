@@ -1,23 +1,21 @@
-// 基本情報
+// 身体測定
 // ステート
 export const state = () => ({
-  patientId: '',// ID
-  name: '',     // 名前
+  height: 0, // 身長
+  weight: 0  // 体重
 })
 // ミューテーション
 export const mutations = {
   setValue(state, payload) {
-    state.patientId = payload.patientId;
-    state.name = payload.name;
+    state.height = payload.height;
+    state.weight = payload.weight;
   }
 }
 // ゲッター
 export const getters = {
-  nameWithSuffix(state) {
-    return function (suffix) {
-      return state.name + suffix
-    }
-  }
+  BMI(state) {
+    return state.weight / (Math.pow(state.height / 100, 2))
+  },
 }
 // アクション
 export const actions = {

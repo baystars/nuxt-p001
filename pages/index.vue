@@ -5,6 +5,8 @@
     <InputBasic></InputBasic>
     <h3>身体測定</h3>
     <InputPhysical></InputPhysical>
+    <h3>血液検査</h3>
+    <InputBlood></InputBlood>
     <h3>診断結果</h3>
     <ShowResult></ShowResult>
   </div>
@@ -13,11 +15,13 @@
 <script>
 import InputBasic from '~/components/InputBasic'
 import InputPhysical from '~/components/InputPhysical'
+import InputBlood from '~/components/InputBlood'
 import ShowResult from '~/components/ShowResult'
 export default {
   components: {
     InputBasic,
     InputPhysical,
+    InputBlood,
     ShowResult
   }
 }
