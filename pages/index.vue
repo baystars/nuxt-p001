@@ -1,28 +1,41 @@
 <template>
   <div class="container">
-    <h1>オブジェクトをそのまま設定</h1>
-    <Smartphone1 v-bind:spec="phoneSpec"/>
-    <h1>オブジェクトのプロパティを設定</h1>
-    <Smartphone2 v-bind="phoneSpec"/>
+    <h1>カスタムイベント</h1>
+    <div v-for="phone in phones" v-bind:key="phone.key">
+      <Smartphone v-bind:spec="phone" v-on:phoneSelected="onPhoneSelected"/>
+    </div>
   </div>
 </template>
 <script>
-import Smartphone1 from '~/components/Smartphone1'
-import Smartphone2 from '~/components/Smartphone2'
+import Smartphone from '~/components/Smartphone'
 export default {
   components: {
-    Smartphone1,
-    Smartphone2
+    Smartphone
   },
   data() {
     return {
-      phoneSpec: { // コンポーネントに設定するJavaScriptオブジェクト
-        id: 1,
-        vendor: 'Samsung',
-        name: 'Galaxy Note10+ 5G',
-        price: 140000,
-        is5G: true
-      }
+      phones: [
+        {
+          id: 1,
+          vendor: 'Samsung',
+          name: 'Galaxy A20'
+        },
+        {
+          id: 2,
+          vendor: 'SHARP',
+          name: 'AQUOS sense3'
+        },
+        {
+          id: 3,
+          vendor: 'OPPO',
+          name: 'Reno A'
+        }
+      ]
+    }
+  },
+  methods: {
+    onPhoneSelected(event) {
+      alert(`${event.vendor} ${event.name}を購入します。`)
     }
   }
 }
