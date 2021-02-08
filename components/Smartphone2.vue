@@ -11,12 +11,12 @@
 </template>
 <script>
 export default {
-  props: ['id', 'vendor', 'name', 'price', 'is5G'] // プロパティ
+  props: ['id', 'vendor', 'name', 'price', 'is5G']
 }
 </script>
 <style scoped>
 .component {
-  background-color: #ffafaf;
+  background-color: #afffaf;
   border: 1px solid black;
   margin-bottom: 10px;
   padding: 10px;

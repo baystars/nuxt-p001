@@ -1,29 +1,28 @@
 <template>
   <div class="container">
-    <h1>プロパティに値を直接設定</h1>
-    <Smartphone id="1" vendor="Apple" name="iPhone 11" price="74800" is5G="false"/>
-    <h1>v-bindで変数を設定</h1>
-    <Smartphone
-      v-bind:id="phoneId"
-      v-bind:vendor="phoneVendor"
-      v-bind:name="phoneName"
-      v-bind:price="phonePrice"
-      v-bind:is5G="phoneIs5G"/>
+    <h1>オブジェクトをそのまま設定</h1>
+    <Smartphone1 v-bind:spec="phoneSpec"/>
+    <h1>オブジェクトのプロパティを設定</h1>
+    <Smartphone2 v-bind="phoneSpec"/>
   </div>
 </template>
 <script>
-import Smartphone from '~/components/Smartphone'
+import Smartphone1 from '~/components/Smartphone1'
+import Smartphone2 from '~/components/Smartphone2'
 export default {
   components: {
-    Smartphone
+    Smartphone1,
+    Smartphone2
   },
   data() {
     return {
-      phoneId: 2,
-      phoneVendor: 'Samsung',
-      phoneName: 'Galaxy Note10+ 5G',
-      phonePrice: 140000,
-      phoneIs5G: true
+      phoneSpec: { // コンポーネントに設定するJavaScriptオブジェクト
+        id: 1,
+        vendor: 'Samsung',
+        name: 'Galaxy Note10+ 5G',
+        price: 140000,
+        is5G: true
+      }
     }
   }
 }
