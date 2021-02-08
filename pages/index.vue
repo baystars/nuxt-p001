@@ -1,15 +1,30 @@
 <template>
-  <div>
-    <h1>Hello {{name}}!</h1> <!-- nameの表示 …（1） -->
-    <input v-model="name"><!-- nameの入力 …（2）-->
+  <div class="container">
+    <h1>健康診断</h1>
+    <h3>基本情報</h3>
+    <InputBasic></InputBasic>
+    <h3>身体測定</h3>
+    <InputPhysical></InputPhysical>
+    <h3>診断結果</h3>
+    <ShowResult></ShowResult>
   </div>
 </template>
+
 <script>
+import InputBasic from '~/components/InputBasic'
+import InputPhysical from '~/components/InputPhysical'
+import ShowResult from '~/components/ShowResult'
 export default {
-  data() { // ページに表示するデータの指定 …（3）
-    return {
-      name: 'World' // nameの初期値 …（4）
-    }
+  components: {
+    InputBasic,
+    InputPhysical,
+    ShowResult
   }
 }
 </script>
+
+<style>
+.container {
+  margin: 15px;
+}
+</style>
