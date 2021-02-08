@@ -1,15 +1,47 @@
 <template>
-  <div>
-    <h1>Hello {{name}}!</h1> <!-- nameの表示 …（1） -->
-    <input v-model="name"><!-- nameの入力 …（2）-->
+  <div class="container">
+    <h1>カスタムイベント</h1>
+    <div v-for="phone in phones" v-bind:key="phone.key">
+      <Smartphone v-bind:spec="phone" v-on:phoneSelected="onPhoneSelected"/>
+    </div>
   </div>
 </template>
 <script>
+import Smartphone from '~/components/Smartphone'
 export default {
-  data() { // ページに表示するデータの指定 …（3）
+  components: {
+    Smartphone
+  },
+  data() {
     return {
-      name: 'World' // nameの初期値 …（4）
+      phones: [
+        {
+          id: 1,
+          vendor: 'Samsung',
+          name: 'Galaxy A20'
+        },
+        {
+          id: 2,
+          vendor: 'SHARP',
+          name: 'AQUOS sense3'
+        },
+        {
+          id: 3,
+          vendor: 'OPPO',
+          name: 'Reno A'
+        }
+      ]
+    }
+  },
+  methods: {
+    onPhoneSelected(event) {
+      alert(`${event.vendor} ${event.name}を購入します。`)
     }
   }
 }
 </script>
+<style>
+.container {
+  margin: 10px;
+}
+</style>
