@@ -10,3 +10,4 @@
 * series04: [画面要素を再利用できる、Vue\.jsのコンポーネント機能を学ぼう \(1/3\)：CodeZine（コードジン）](https://codezine.jp/article/detail/11856)
     * series04-property: [画面要素を再利用できる、Vue\.jsのコンポーネント機能を学ぼう \(2/3\)：CodeZine（コードジン）](https://codezine.jp/article/detail/11856?p=2)
     * series04-property-object: [画面要素を再利用できる、Vue\.jsのコンポーネント機能を学ぼう \(2/3\)：CodeZine（コードジン）](https://codezine.jp/article/detail/11856?p=2)
+    * series04-event: [画面要素を再利用できる、Vue\.jsのコンポーネント機能を学ぼう \(3/3\)：CodeZine（コードジン）](https://codezine.jp/article/detail/11856?p=3)
