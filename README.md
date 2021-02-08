@@ -13,3 +13,4 @@
     * series04-event: [画面要素を再利用できる、Vue\.jsのコンポーネント機能を学ぼう \(3/3\)：CodeZine（コードジン）](https://codezine.jp/article/detail/11856?p=3)
     * series04-change: [画面要素を再利用できる、Vue\.jsのコンポーネント機能を学ぼう \(3/3\)：CodeZine（コードジン）](https://codezine.jp/article/detail/11856?p=3)
 * series05: [Webページの状態を集中管理できる「Nuxt\.js」のVuexストアを使いこなそう \(2/3\)：CodeZine（コードジン）](https://codezine.jp/article/detail/11994?p=2)
+    * series05-async: [Webページの状態を集中管理できる「Nuxt\.js」のVuexストアを使いこなそう \(3/3\)：CodeZine（コードジン）](https://codezine.jp/article/detail/11994?p=3)

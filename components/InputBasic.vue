@@ -1,6 +1,5 @@
 <template>
   <div class="component">
-    <!-- テキストボックス -->
     氏名：<input v-model="name" v-on:input="onInput">
   </div>
 </template>
@@ -8,12 +7,12 @@
 export default {
   data() {
     return {
-      name: ''  // テキストボックスの入力内容
+      name: ''
     }
   },
   methods: {
-    onInput() { // テキストボックス変更時の処理
-      this.$store.commit('setName', this.name) // ミューテーション
+    onInput() {
+      this.$store.dispatch('doSetName', this.name)
     }
   }
 }
