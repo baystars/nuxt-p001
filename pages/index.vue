@@ -1,47 +1,43 @@
 <template>
   <div class="container">
-    <h1>カスタムイベント</h1>
-    <div v-for="phone in phones" v-bind:key="phone.key">
-      <Smartphone v-bind:spec="phone" v-on:phoneSelected="onPhoneSelected"/>
-    </div>
+    <h1>コンポーネントの切り替え表示</h1>
+      <button v-on:click="onClickApple">Apple</button>
+      <button v-on:click="onClickSamsung">Samsung</button>
+      <button v-on:click="onClickSHARP">SHARP</button>
+    <div v-bind:is="currentComponent"/><!-- コンポーネント表示 -->
   </div>
 </template>
 <script>
-import Smartphone from '~/components/Smartphone'
+import Apple from '~/components/Apple'
+import Samsung from '~/components/Samsung'
+import SHARP from '~/components/SHARP'
 export default {
-  components: {
-    Smartphone
+  components: { // コンポーネント
+    Apple,
+    Samsung,
+    SHARP
   },
   data() {
     return {
-      phones: [
-        {
-          id: 1,
-          vendor: 'Samsung',
-          name: 'Galaxy A20'
-        },
-        {
-          id: 2,
-          vendor: 'SHARP',
-          name: 'AQUOS sense3'
-        },
-        {
-          id: 3,
-          vendor: 'OPPO',
-          name: 'Reno A'
-        }
-      ]
+      currentComponent: 'Apple' // コンポーネント名
     }
   },
   methods: {
-    onPhoneSelected(event) {
-      alert(`${event.vendor} ${event.name}を購入します。`)
+    // ボタン押下時にコンポーネント名を変更
+    onClickApple() {
+      this.currentComponent = 'Apple'
+    },
+    onClickSamsung() {
+      this.currentComponent = 'Samsung'
+    },
+    onClickSHARP() {
+      this.currentComponent = 'SHARP'
     }
   }
 }
 </script>
 <style>
 .container {
-  margin: 10px;
+  margin: 15px;
 }
 </style>
