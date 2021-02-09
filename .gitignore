@@ -6,6 +6,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*.bak
+*~
+node_modules
+package-lock.json
 
 # Runtime data
 pids
