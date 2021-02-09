@@ -1,25 +1,64 @@
 {
-  "lockerStatus": [
+  "station": [
     {
       "id": 1,
-      "place": "南改札前",
-      "availableS": true,
-      "availableM": false,
-      "availableL": true
+      "name": "北山本駅",
+      "lockerStatus": [
+        {
+          "id": 1,
+          "place": "南改札前",
+          "availableS": true,
+          "availableM": false,
+          "availableL": true
+        },
+        {
+          "id": 2,
+          "place": "北改札裏",
+          "availableS": true,
+          "availableM": true,
+          "availableL": false
+        },
+        {
+          "id": 3,
+          "place": "駅前広場",
+          "availableS": false,
+          "availableM": false,
+          "availableL": true
+        }
+      ]
     },
     {
       "id": 2,
-      "place": "北改札裏",
-      "availableS": true,
-      "availableM": true,
-      "availableL": false
+      "name": "山本駅",
+      "lockerStatus": [
+        {
+          "id": 1,
+          "place": "改札裏",
+          "availableS": true,
+          "availableM": true,
+          "availableL": true
+        },
+        {
+          "id": 2,
+          "place": "待合所",
+          "availableS": true,
+          "availableM": false,
+          "availableL": false
+        }
+      ]
     },
     {
       "id": 3,
-      "place": "駅前広場",
-      "availableS": false,
-      "availableM": false,
-      "availableL": true
+      "name": "南山本駅",
+      "lockerStatus": [
+        {
+          "id": 1,
+          "place": "券売機横",
+          "availableS": false,
+          "availableM": false,
+          "availableL": false
+        }
+      ]
     }
   ]
 }

@@ -16,3 +16,4 @@
     * series05-async: [Webページの状態を集中管理できる「Nuxt\.js」のVuexストアを使いこなそう \(3/3\)：CodeZine（コードジン）](https://codezine.jp/article/detail/11994?p=3)
     * series05-module: [Webページの状態を集中管理できる「Nuxt\.js」のVuexストアを使いこなそう \(3/3\)：CodeZine（コードジン）](https://codezine.jp/article/detail/11994?p=3)
 * series06: [ページ表示前にデータを取得して反映できる「Nuxt\.js」の非同期データ機能を使いこなそう \(1/3\)：CodeZine（コードジン）](https://codezine.jp/article/detail/12398)
+    * series06-params: [ページ表示前にデータを取得して反映できる「Nuxt\.js」の非同期データ機能を使いこなそう \(2/3\)：CodeZine（コードジン）](https://codezine.jp/article/detail/12398?p=2)
