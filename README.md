@@ -20,3 +20,5 @@
     * series06-fetch: [ページ表示前にデータを取得して反映できる「Nuxt\.js」の非同期データ機能を使いこなそう \(3/3\)：CodeZine（コードジン）](https://codezine.jp/article/detail/12398?p=3)
 * series07(no branch): [「Nuxt\.js」で作ったWebページをインターネットで公開する方法 \(1/3\)：CodeZine（コードジン）](https://codezine.jp/article/detail/13422)
     * series07-heroku: [「Nuxt\.js」で作ったWebページをインターネットで公開する方法 \(2/3\)：CodeZine（コードジン）](https://codezine.jp/article/detail/13422?p=2)
+    * series07-firebase: [「Nuxt\.js」で作ったWebページをインターネットで公開する方法 \(3/3\)：CodeZine（コードジン）](https://codezine.jp/article/detail/13422?p=3)
+        * **2021/2/15でNode:8が利用不可になるため使えなくなる**
