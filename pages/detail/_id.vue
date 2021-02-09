@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <h1>{{ name }} コインロッカー状況</h1>
+    <h1>
+      {{ name }} コインロッカー状況
+        {{ $store.state.favorites.has(Number($route.params.id)) ? '★' : '' }}
+    </h1>
     <table>
       <tr>
         <th rowspan="2">場所</th>
@@ -18,19 +21,30 @@
         <td>{{ elem.availableL ? '〇' : '×' }}</td>
       </tr>
     </table>
+    <a href="#" v-on:click="toggleFavorite">お気に入り切り替え</a>
+    <nuxt-link to="/">戻る</nuxt-link>
   </div>
 </template>
 <script>
 export default {
-  asyncData({ $axios, params }) { // パラメーターを含むparamsを記述
-    // paramsから、パスに指定されたID番号を取得
+  asyncData({ $axios, params, error }) {
     const stationId = params.id
-    // ID番号を指定してAPIを呼び出し
     return $axios.get(`http://localhost:3001/station/${stationId}`)
     .then(res => {
-      // APIのレスポンスデータを設定
       return res.data
+    }).catch(e => {
+      error({ statusCode: 404, message: 'ページが見つかりません' })
     })
+  },
+  methods: {
+    toggleFavorite() {
+      // Vuexストアを更新
+      this.$store.commit('toggleFavorite', Number(this.$route.params.id))
+      // 更新した内容をAPIに送信
+      return this.$axios.post('http://localhost:3001/favorites', {
+        favorites: Array.from(this.$store.state.favorites)
+      })
+    }
   }
 }
 </script>

@@ -1,4 +1,10 @@
 {
+  "favorites": {
+    "favorites": [
+      1,
+      3
+    ]
+  },
   "station": [
     {
       "id": 1,
